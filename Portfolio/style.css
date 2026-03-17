@@ -198,8 +198,8 @@ nav {
 /* Container */
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    gap: 30px; /* space between cards */
     padding: 20px 0;
 }
 
@@ -209,8 +209,7 @@ nav {
     border-radius: 16px;
     padding: 25px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: 0.3s ease;
-    
+
     display: flex;
     flex-direction: column;
     height: 100%;
