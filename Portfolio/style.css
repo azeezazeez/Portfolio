@@ -202,12 +202,15 @@ nav {
 }
 
 .project-card {
-    background: var(--card-bg);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    border-top: 5px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 .tech-stack {
@@ -220,6 +223,15 @@ nav {
 .project-card ul {
     margin: 15px 0;
     padding-left: 20px;
+}
+
+
+.project-info ul {
+    flex-grow: 1; /* pushes link down */
+}
+
+.project-link {
+    margin-top: auto; /* sticks to bottom */
 }
 
 .project-card li {
