@@ -83,7 +83,6 @@ The portfolio is designed with a clean UI, smooth animations, and modern web pra
 * Dashboard with analytics
 * Built using React + Spring Boot
 
----
 
 ### 🤖 Aura AI Chatbot Assistant
 
