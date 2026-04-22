@@ -88,12 +88,7 @@ The portfolio is designed with a clean UI, smooth animations, and modern web pra
 * AI chatbot using React + Spring Boot
 * Integrated with Ollama (Llama 3)
 * Real-time chat interface
-
-### 🍽️ Restaurant Billing System
-
-* Console-based Java application
-* Menu-driven system with bill calculation
-
+* 
 ---
 
 ## 📞 Contact
