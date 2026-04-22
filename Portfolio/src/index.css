@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=JetBrains+Mono:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-accent: var(--accent-color);
+  --color-page-bg: var(--bg-color);
+  --color-page-text: var(--text-color);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+}
+
+@layer base {
+  :root {
+    --accent-color: #00FF88;
+    --bg-color: #0A0A0A;
+    --text-color: #FFFFFF;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --selection-bg: rgba(0, 255, 136, 0.3);
+  }
+
+  [data-theme="light"] {
+    --bg-color: #F8F9FA;
+    --text-color: #0A0A0A;
+    --card-bg: rgba(0, 0, 0, 0.03);
+    --card-border: rgba(0, 0, 0, 0.08);
+    --selection-bg: rgba(0, 255, 136, 0.15);
+  }
+
+  body {
+    @apply bg-page-bg text-page-text font-sans selection:bg-accent/30 selection:text-accent;
+    overflow-x: hidden;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+
+  h1, h2, h3 {
+    @apply tracking-tight font-bold uppercase;
+  }
+}
+
+/* Grounded Luxury Glass */
+.luminous-card {
+  @apply bg-card-bg backdrop-blur-xl border border-card-border rounded-2xl p-8 transition-all duration-500 ease-out;
+}
+
+.luminous-card:hover {
+  @apply border-accent/40 bg-page-text/[0.05];
+  transform: translateY(-4px);
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-blue-400;
+}
+
+.tech-tag {
+  @apply px-3 py-1 rounded-md bg-page-text/5 border border-page-text/10 text-[9px] font-mono uppercase tracking-widest text-page-text/40;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-page-bg;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-page-text/10 rounded-full hover:bg-accent/50;
+}
+
+.interactive {
+  @apply cursor-pointer;
+}
+
+@keyframes aurora-subtle {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.2; }
+  50% { transform: translateY(-5%) scale(1.1); opacity: 0.3; }
+}
+
+.animate-aurora-subtle {
+  animation: aurora-subtle 15s infinite ease-in-out;
+}
+
