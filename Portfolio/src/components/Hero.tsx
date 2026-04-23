@@ -36,7 +36,7 @@ export default function Hero() {
 
               <div className="flex gap-2">
                 <a
-                  href="https://drive.google.com/uc?id=125zPii-1q9UbMiQLxKC3ZCvSyHNzC2Sd"
+                  href="https://drive.google.com/file/d/125zPii-1q9UbMiQLxKC3ZCvSyHNzC2Sd/view?usp=sharing"
                   target="_blank"
                   className="px-6 py-4 bg-page-text/5 border border-page-text/10 text-page-text font-bold rounded-xl hover:bg-page-text/10 transition-all interactive flex items-center gap-2"
                 >
