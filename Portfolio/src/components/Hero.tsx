@@ -43,7 +43,7 @@ export default function Hero() {
                   <FileText size={18} /> View Resume
                 </a>
                 <a
-                  href="https://drive.google.com/file/d/125zPii-1q9UbMiQLxKC3ZCvSyHNzC2Sd/view?usp=drivesdk"
+                  href="https://drive.google.com/uc?export=download&id=125zPii-1q9UbMiQLxKC3ZCvSyHNzC2Sd"
                   download
                   className="px-4 py-4 bg-page-text/5 border border-page-text/10 text-page-text font-bold rounded-xl hover:bg-page-text/10 transition-all interactive flex items-center gap-2"
                   title="Download Resume"
