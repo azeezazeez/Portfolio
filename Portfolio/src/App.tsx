@@ -83,7 +83,7 @@ export default function App() {
               <div className="flex flex-col gap-2 font-bold uppercase text-[10px] tracking-widest text-page-text/40">
                 <a href="#about" className="hover:text-accent transition-colors interactive">About Me</a>
                 <a href="#projects" className="hover:text-accent transition-colors interactive">Projects</a>
-                <a href="#skills" className="hover:text-accent transition-colors interactive">Technical Skills</a>
+                <a href="#skills" className="hover:text-accent transition-colors interactive">Tech Stack</a>
               </div>
             </div>
 
