@@ -1,7 +1,51 @@
+import { useState, FormEvent } from "react";
 import { motion } from "motion/react";
-import { Mail, MessageSquare, Send, Github, Linkedin } from "lucide-react";
+import { Mail, MessageSquare, Send } from "lucide-react";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+  const [error, setError] = useState("");
+
+  const validateEmail = (email: string) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    setError("");
+
+    // Validation
+    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+      setError("Please fill in all fields.");
+      return;
+    }
+
+    if (!validateEmail(formData.email)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
+
+    // Gmail Compose URL
+    const subject = encodeURIComponent(`Message from ${formData.name}`);
+    const body = encodeURIComponent(`Contact Name: ${formData.name}\nContact Email: ${formData.email}\n\nMessage:\n${formData.message}`);
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=azeezazeez7989@gmail.com&su=${subject}&body=${body}`;
+
+    window.open(gmailUrl, "_blank");
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
   return (
     <section id="contact" className="py-8 px-6 md:px-12">
       <div className="max-w-[1200px] mx-auto">
@@ -20,7 +64,7 @@ export default function Contact() {
           </div>
 
           <div className="lg:col-span-5 space-y-6">
-            <div className="luminous-card">
+            <div className="luminous-card h-full">
               <h3 className="text-xl font-bold mb-8">Channels</h3>
               <div className="space-y-6">
                 <a href="mailto:azeezazeez7989@gmail.com" className="flex items-center gap-4 group interactive">
@@ -58,31 +102,60 @@ export default function Contact() {
 
           <div className="lg:col-span-7">
             <div className="luminous-card">
-              <form className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <label className="text-[9px] font-bold uppercase tracking-widest text-page-text ml-2">Name</label>
-                    <input type="text" className="w-full bg-page-text/5 border border-page-text/5 rounded-xl px-4 py-3 text-sm focus:border-accent outline-none transition-all placeholder:text-page-text/40" placeholder="Name" />
+                    <input 
+                      type="text" 
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full bg-page-text/5 border border-page-text/5 rounded-xl px-4 py-3 text-sm focus:border-accent outline-none transition-all placeholder:text-page-text/40" 
+                      placeholder="Name" 
+                    />
                   </div>
                   <div className="space-y-2">
                     <label className="text-[9px] font-bold uppercase tracking-widest text-page-text ml-2">Email</label>
-                    <input type="email" className="w-full bg-page-text/5 border border-page-text/5 rounded-xl px-4 py-3 text-sm focus:border-accent outline-none transition-all placeholder:text-page-text/40" placeholder="Email" />
+                    <input 
+                      type="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full bg-page-text/5 border border-page-text/5 rounded-xl px-4 py-3 text-sm focus:border-accent outline-none transition-all placeholder:text-page-text/40" 
+                      placeholder="Email" 
+                    />
                   </div>
                 </div>
                 <div className="space-y-2">
                   <label className="text-[9px] font-bold uppercase tracking-widest text-page-text ml-2">Message</label>
-                  <textarea className="w-full bg-page-text/5 border border-page-text/5 rounded-xl px-4 py-4 text-sm focus:border-accent outline-none transition-all h-32 resize-none placeholder:text-page-text/40" placeholder="Message content" />
+                  <textarea 
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="w-full bg-page-text/5 border border-page-text/5 rounded-xl px-4 py-4 text-sm focus:border-accent outline-none transition-all h-32 resize-none placeholder:text-page-text/40" 
+                    placeholder="Message content" 
+                  />
                 </div>
-                <a
-                  href="mailto:azeezazeez7989@gmail.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-4 bg-page-text text-page-bg font-bold rounded-xl hover:bg-accent transition-all flex items-center justify-center gap-3 interactive"
+
+                {error && (
+                  <motion.div 
+                    initial={{ opacity: 0, x: -10 }} 
+                    animate={{ opacity: 1, x: 0 }}
+                    className="text-red-400 text-[10px] font-bold uppercase tracking-widest ml-2"
+                  >
+                    {error}
+                  </motion.div>
+                )}
+
+                <button
+                  type="submit"
+                  className="w-full py-4 bg-page-text text-page-bg font-bold rounded-xl hover:bg-accent transition-all flex items-center justify-center gap-3 interactive disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <span>Send</span>
                   <span>Message</span>
                   <Send size={16} />
-                </a>
+                </button>
               </form>
             </div>
           </div>
