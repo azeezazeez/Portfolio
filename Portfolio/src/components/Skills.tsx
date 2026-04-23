@@ -33,8 +33,8 @@ export default function Skills() {
               <Code size={12} />
             </div>
             <h2 className="text-4xl md:text-6xl font-bold uppercase leading-[0.9]">
-              TECHNICAL <br />
-              <span className="text-gradient">SKILLS</span>
+              TECH <br />
+              <span className="text-gradient">STACK</span>
             </h2>
           </motion.div>
           <div className="max-w-xs text-xs font-medium uppercase tracking-widest leading-loose text-page-text/30">
