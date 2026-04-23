@@ -43,7 +43,7 @@ export default function Hero() {
                   <FileText size={18} /> View Resume
                 </a>
                 <a
-                  href="/api/download-resume"
+                  href="/api/download-resume.pdf"
                   download="Abdul_Azeez_Resume.pdf"
                   className="px-4 py-4 bg-page-text/5 border border-page-text/10 text-page-text font-bold rounded-xl hover:bg-page-text/10 transition-all interactive flex items-center gap-2"
                   title="Download Resume"
