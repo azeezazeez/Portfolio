@@ -43,13 +43,12 @@ export default function Hero() {
                   <FileText size={18} /> View Resume
                 </a>
                 <a
-                  href="/api/resume-download"
-                  download="Abdul_Azeez_Resume.pdf"
-                  target="_blank"
-                  className="px-4 py-4 bg-page-text/5 border border-page-text/10 text-page-text font-bold rounded-xl hover:bg-page-text/10 transition-all interactive flex items-center gap-2"
-                  title="Download Resume"
-                >
-                  <Download size={18} /> Download Resume
+                 href="https://drive.usercontent.google.com/download?id=125zPii-1q9UbMiQLxKC3ZCvSyHNzC2Sd&export=download&confirm=t"
+                 download="Abdul_Azeez_Resume.pdf"
+                 className="px-4 py-4 bg-page-text/5 border border-page-text/10 text-page-text font-bold rounded-xl hover:bg-page-text/10 transition-all interactive flex items-center gap-2"
+                 title="Download Resume"
+                      >
+                 <Download size={18} /> Download Resume
                 </a>
               </div>
             </div>
