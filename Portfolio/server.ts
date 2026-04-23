@@ -11,7 +11,8 @@ async function startServer() {
   const PORT = 3000;
 
   // Proxy route for resume download
-  app.get("/api/download-resume.pdf", async (req, res) => {
+  app.get("/api/resume-download", async (req, res) => {
+    console.info(`[Download] Request received from ${req.ip}`);
     try {
       const FILE_ID = "125zPii-1q9UbMiQLxKC3ZCvSyHNzC2Sd";
       const driveUrl = `https://drive.google.com/uc?export=download&id=${FILE_ID}`;
@@ -24,17 +25,14 @@ async function startServer() {
       });
       
       if (!response.ok) {
-        // Fallback to direct redirect if proxy fetch fails
-        console.warn(`Proxy fetch failed (${response.status}), falling back to direct redirect.`);
+        console.error(`[Download] Google Drive Error: ${response.status}`);
         return res.redirect(driveUrl);
       }
 
-      const contentType = response.headers.get("content-type") || "";
+      const contentType = response.headers.get("content-type") || "application/pdf";
       
-      // If Google Drive returns HTML, it's likely the "virus scan" confirmation page
       if (contentType.includes("text/html")) {
-        console.warn("Google Drive returned HTML instead of PDF. Possibly virus scan warning.");
-        // Try to extra the confirmation token if needed, or just redirect as a fallback
+        console.warn("[Download] Received HTML from Drive, likely virus scan. Redirecting...");
         return res.redirect(driveUrl);
       }
 
@@ -42,11 +40,11 @@ async function startServer() {
       res.setHeader("Content-Disposition", 'attachment; filename="Abdul_Azeez_Resume.pdf"');
       
       const arrayBuffer = await response.arrayBuffer();
-      const buffer = Buffer.from(arrayBuffer);
-      res.send(buffer);
+      res.send(Buffer.from(arrayBuffer));
+      console.info("[Download] File streamed successfully.");
     } catch (error) {
-      console.error("Download Proxy Error:", error);
-      res.status(500).json({ error: "Failed to process download", details: error instanceof Error ? error.message : String(error) });
+      console.error("[Download] Critical Error:", error);
+      res.status(500).send("Internal Server Error during download.");
     }
   });
 
