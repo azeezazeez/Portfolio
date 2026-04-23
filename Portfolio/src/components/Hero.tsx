@@ -31,12 +31,12 @@ export default function Hero() {
 
             <div className="flex flex-wrap gap-4 pt-4">
               <a href="#projects" className="px-8 py-4 bg-page-text text-page-bg font-bold rounded-xl hover:bg-accent hover:text-page-bg transition-all flex items-center gap-2 interactive">
-                View Projects <ArrowRight size={18} />
+                See My Work <ArrowRight size={18} />
               </a>
 
               <div className="flex gap-2">
                 <a
-                  href="https://drive.google.com/file/d/125zPii-1q9UbMiQLxKC3ZCvSyHNzC2Sd/view?usp=drivesdk"
+                  href="https://drive.google.com/uc?id=125zPii-1q9UbMiQLxKC3ZCvSyHNzC2Sd"
                   target="_blank"
                   className="px-6 py-4 bg-page-text/5 border border-page-text/10 text-page-text font-bold rounded-xl hover:bg-page-text/10 transition-all interactive flex items-center gap-2"
                 >
