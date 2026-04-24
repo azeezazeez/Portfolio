@@ -18,11 +18,10 @@ const projects = [
     {
     title: "Aura AI Chat bot",
     id: "Aura AI",
-    description: `Developed an AI-powered chatbot application using Java and Spring Boot. Integrated Ollama AI for nat
+    description: `Developed an AI-powered chatbot application using Java and Spring Boot. Integrated Groq AI for nat
            ural language processing and intelligent responses. Designed RESTful APIs for seamless communication
                between backend and AI models, ensuring efficient request handling and scalability.
-                    (Note: It runs locally only due to local AI)`,
-    tech: ["JAVA", "SPRING BOOT", "OLLAMA AI"],
+    tech: ["JAVA", "SPRING BOOT", "Groq AI"],
     image: "https://lh3.googleusercontent.com/d/11OXqHFHsHapIuGkDkMyVf8EEsuFNEppf",
     github: "https://github.com/azeezazeez/Aura-AI-Chatbot-Application"
     demo: "https://aura-ai-chatbot-app.vercel.app"
