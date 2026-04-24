@@ -14,6 +14,19 @@ const projects = [
     github: "https://github.com/azeezazeez/Cartify-Web-Application",
     demo: "https://cartify-cart.vercel.app"
   },
+
+    {
+    title: "Aura AI Chat bot",
+    id: "Aura AI",
+    description: `Developed an AI-powered chatbot application using Java and Spring Boot. Integrated Ollama AI for nat
+           ural language processing and intelligent responses. Designed RESTful APIs for seamless communication
+               between backend and AI models, ensuring efficient request handling and scalability.
+                    (Note: It runs locally only due to local AI)`,
+    tech: ["JAVA", "SPRING BOOT", "OLLAMA AI"],
+    image: "https://lh3.googleusercontent.com/d/11OXqHFHsHapIuGkDkMyVf8EEsuFNEppf",
+    github: "https://github.com/azeezazeez/Aura-AI-Chatbot-Application"
+  },
+  
   {
     title: "Edu Exam System",
     id: "Edu Exam",
@@ -24,17 +37,6 @@ const projects = [
     image: "https://lh3.googleusercontent.com/d/12t7f-clbeUw2NHD7oK8bVj_aJFCixvCf",
     github: "https://github.com/azeez-abdul/online-exam",
     demo: "https://edu-exam.architect.io"
-  },
-  {
-    title: "Aura AI Chat bot",
-    id: "Aura AI",
-    description: `Developed an AI-powered chatbot application using Java and Spring Boot. Integrated Ollama AI for nat
-           ural language processing and intelligent responses. Designed RESTful APIs for seamless communication
-               between backend and AI models, ensuring efficient request handling and scalability.
-                    (Note: It runs locally only due to local AI)`,
-    tech: ["JAVA", "SPRING BOOT", "OLLAMA AI"],
-    image: "https://lh3.googleusercontent.com/d/11OXqHFHsHapIuGkDkMyVf8EEsuFNEppf",
-    github: "https://github.com/azeezazeez/Aura-AI-Chatbot-Application"
   }
 ];
 
