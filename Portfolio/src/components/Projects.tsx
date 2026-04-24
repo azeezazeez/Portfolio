@@ -25,6 +25,7 @@ const projects = [
     tech: ["JAVA", "SPRING BOOT", "OLLAMA AI"],
     image: "https://lh3.googleusercontent.com/d/11OXqHFHsHapIuGkDkMyVf8EEsuFNEppf",
     github: "https://github.com/azeezazeez/Aura-AI-Chatbot-Application"
+    demo: "https://aura-ai-chatbot-app.vercel.app"
   },
   
   {
