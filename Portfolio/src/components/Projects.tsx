@@ -21,7 +21,7 @@ const projects = [
           thentication, exam creation, question management, and automated result evaluation. Designed RESTful
           APIs for communication between frontend and backend, using PostgreSQL for secure data storage.`,
     tech: ["JAVA", "SPRING BOOT", "POSTGRESQL", "JWT"],
-    image: "https://lh3.googleusercontent.com/d/1_oLGccTEbY_cVALFqDCmHwnGlRhhR1il",
+    image: "https://lh3.googleusercontent.com/d/12t7f-clbeUw2NHD7oK8bVj_aJFCixvCf",
     github: "https://github.com/azeez-abdul/online-exam",
     demo: "https://edu-exam.architect.io"
   },
