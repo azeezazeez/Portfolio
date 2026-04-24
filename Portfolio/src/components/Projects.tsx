@@ -33,7 +33,7 @@ const projects = [
                between backend and AI models, ensuring efficient request handling and scalability.
                     (Note: It runs locally only due to local AI)`,
     tech: ["JAVA", "SPRING BOOT", "OLLAMA AI"],
-    image: "https://lh3.googleusercontent.com/d/1mAIsJ6AS4k8tWxVyAnhN6GEaxcq9G-LM",
+    image: "https://lh3.googleusercontent.com/d/11OXqHFHsHapIuGkDkMyVf8EEsuFNEppf",
     github: "https://github.com/azeezazeez/Aura-AI-Chatbot-Application"
   }
 ];
