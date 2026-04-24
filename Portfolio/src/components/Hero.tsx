@@ -43,22 +43,14 @@ export default function Hero() {
                   <FileText size={18} /> View Resume
                 </a>
                 <a
-                  href="#"
-                  className="px-4 py-4 bg-page-text/5 border border-page-text/10 text-page-text font-bold rounded-xl hover:bg-page-text/10 transition-all interactive flex items-center gap-2"
-                  title="Download Resume"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    const downloadUrl = "https://drive.google.com/uc?export=download&id=1hqa46j4XE3yuQXihDYZl3fLP73Q6rQJH";
-                    const link = document.createElement('a');
-                    link.href = downloadUrl;
-                    link.download = "Abdul Azeez Resume.pdf";
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                  }}
-                >
-                  <Download size={18} /> Download Resume
-                </a>
+                 href="https://drive.google.com/uc?export=download&confirm=t&id=1hqa46j4XE3yuQXihDYZl3fLP73Q6rQJH"
+                 className="px-4 py-4 bg-page-text/5 border border-page-text/10 text-page-text font-bold rounded-xl hover:bg-page-text/10 transition-all interactive flex items-center gap-2"
+                 title="Download Resume"
+                  target="_blank"
+                 rel="noopener noreferrer"
+                     >
+               <Download size={18} /> Download Resume
+               </a>
               </div>
             </div>
           </div>
