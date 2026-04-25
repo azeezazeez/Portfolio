@@ -80,6 +80,8 @@ Welcome to the source code of my personal portfolio website. This project is a f
 - Built using React + Spring Boot  
 
 ### ⚡ Aura AI – Chatbot Assistant *(Lightning Fast)*  
+**Live Demo:** [https://aura-ai-chatbot-app.vercel.app](https://eduexam-exam.vercel.app)  
+
 - AI chatbot using React + Spring Boot  
 - Integrated with **Groq AI (Llama 3.1 8B)** for ultra-low latency responses  
 - Real-time conversational interface with lightning icon branding  
