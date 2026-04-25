@@ -2,6 +2,9 @@
 
 > *“Building scalable web solutions with clean code and modern design.”*
 
+**🔗 Live Portfolio:** [https://abdul-azeez.vercel.app](https://abdul-azeez.vercel.app)  
+*(Replace with your actual deployed portfolio link)*
+
 Welcome to the source code of my personal portfolio website. This project is a fully responsive, modern web application that introduces who I am, showcases my technical expertise, highlights key projects, and provides an easy way to connect with me.
 
 ---
@@ -76,10 +79,10 @@ Welcome to the source code of my personal portfolio website. This project is a f
 - Dashboard with performance analytics  
 - Built using React + Spring Boot  
 
-### 🤖 Aura AI – Chatbot Assistant  
+### ⚡ Aura AI – Chatbot Assistant *(Lightning Fast)*  
 - AI chatbot using React + Spring Boot  
-- Integrated with Ollama (Llama 3)  
-- Real-time conversational interface  
+- Integrated with **Groq AI (Llama 3.1 8B)** for ultra-low latency responses  
+- Real-time conversational interface with lightning icon branding  
 
 ---
 
@@ -88,8 +91,6 @@ Welcome to the source code of my personal portfolio website. This project is a f
 - 📧 **Email:** [azeezazeez7989@gmail.com](mailto:azeezazeez7989@gmail.com)  
 - 📱 **Phone:** +91 7989284581  
 - 📍 **Location:** Hyderabad, Telangana, India  
-
-
 
 ---
 
