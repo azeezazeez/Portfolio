@@ -4,7 +4,7 @@
 
 ### A modern, responsive personal portfolio showcasing my journey as a Full-Stack Software Developer
 
-[![Live Portfolio](https://img.shields.io/badge/🚀_Live_Portfolio-Visit_Now-6C63FF?style=for-the-badge)](https://github.com/AbdulAzeez)
+[![Live Portfolio](https://img.shields.io/badge/🚀_Live_Portfolio-Visit_Now-6C63FF?style=for-the-badge)](https://abdul-azeez.vercel.app)
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white)](https://spring.io/projects/spring-boot)
 
@@ -16,11 +16,6 @@
 
 ### 🏠 Introduction
 ![Intro](https://drive.google.com/uc?export=view&id=1tK3SUHXarpJIv-UUBi5cc4-x2OQLhqD1)
-
----
-
-### 👤 About Me
-![About](https://drive.google.com/uc?export=view&id=1-WjC62o70Ijjw4s5vf_ZzpFR_13tK1tC)
 
 ---
 
@@ -51,6 +46,11 @@
 
 ### 📬 Get In Touch
 ![Get in Touch](https://drive.google.com/uc?export=view&id=1aLdePIU0MHJEY0p_fF7Ng5Oou-cEDtZR)
+
+---
+
+### 👤 About Me
+![About](https://drive.google.com/uc?export=view&id=1-WjC62o70Ijjw4s5vf_ZzpFR_13tK1tC)
 
 ---
 
@@ -138,7 +138,7 @@ This is a fully responsive personal portfolio website built to highlight my tech
 > An intelligent AI chatbot with real-time conversational interface.
 
 - 🤖 **AI Chatbot** powered by React + Spring Boot
-- 🦙 Integrated with **Ollama (Llama 3)** for local LLM inference
+- 🦙 Integrated with **Groq (Llama 3)** for local LLM inference
 - 💬 Real-time **Chat Interface** with smooth UX
 
 ---
