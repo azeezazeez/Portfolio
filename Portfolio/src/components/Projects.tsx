@@ -31,7 +31,7 @@ const projects = [
     description: `Developed a web-based examination system using Java and Spring Boot. Implemented features like au
           thentication, exam creation, question management, and automated result evaluation. Designed RESTful
           APIs for communication between frontend and backend, using PostgreSQL for secure data storage.`,
-    tech: ["JAVA", "SPRING BOOT", "POSTGRESQL", "JWT"],
+    tech: ["JAVA", "SPRING BOOT", "POSTGRESQL"],
     image: "https://lh3.googleusercontent.com/d/12t7f-clbeUw2NHD7oK8bVj_aJFCixvCf",
     github: "https://github.com/azeez-abdul/online-exam",
     demo: "https://edu-exam.architect.io"
