@@ -1,4 +1,3 @@
-```tsx
 import { motion } from "motion/react";
 import { Sparkles } from "lucide-react";
 
@@ -118,15 +117,3 @@ export default function About() {
     </section>
   );
 }
-```
-
-The profile section is now:
-
-* **Mobile:** `288 × 288`
-* **Desktop:** `384 × 384`
-* **Shape:** square
-* **Outline:** 2px accent border
-* **Image:** slightly zoomed out with `scale-95`
-* **Position:** slightly downward with `object-[center_55%]`
-* **Hover:** returns to normal scale
-* **No `rounded-full`** anywhere on the image/profile container.
