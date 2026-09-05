@@ -107,7 +107,7 @@ export default function About() {
               <img
                 src="/My Picture.png"
                 alt="Abdul Azeez - Profile"
-                className="w-full h-full aspect-square object-cover object-[center_65%] scale-95 group-hover:scale-100 transition-transform duration-1000"
+                className="w-full h-full aspect-square object-cover object-[center_35%] scale-95 group-hover:scale-100 transition-transform duration-1000"
               />
             </motion.div>
           </div>
