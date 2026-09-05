@@ -35,24 +35,38 @@
 
   /* ========================================
      DARK THEME
-     Automatically follows the user's
-     device/browser theme
      ======================================== */
 
-  @media (prefers-color-scheme: dark) {
-    :root {
-      color-scheme: dark;
+  [data-theme="dark"] {
+    color-scheme: dark;
 
-      --accent-color: #00ff88;
+    --accent-color: #00ff88;
 
-      --bg-color: #0a0a0a;
-      --text-color: #ffffff;
+    --bg-color: #0a0a0a;
+    --text-color: #ffffff;
 
-      --card-bg: rgba(255, 255, 255, 0.03);
-      --card-border: rgba(255, 255, 255, 0.1);
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --card-border: rgba(255, 255, 255, 0.1);
 
-      --selection-bg: rgba(0, 255, 136, 0.3);
-    }
+    --selection-bg: rgba(0, 255, 136, 0.3);
+  }
+
+  /* ========================================
+     LIGHT THEME
+     ======================================== */
+
+  [data-theme="light"] {
+    color-scheme: light;
+
+    --accent-color: #00ff88;
+
+    --bg-color: #f8f9fa;
+    --text-color: #0a0a0a;
+
+    --card-bg: rgba(0, 0, 0, 0.03);
+    --card-border: rgba(0, 0, 0, 0.08);
+
+    --selection-bg: rgba(0, 255, 136, 0.15);
   }
 
   /* ========================================
