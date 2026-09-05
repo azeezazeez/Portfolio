@@ -1,3 +1,4 @@
+```tsx
 import { motion } from "motion/react";
 import { Sparkles } from "lucide-react";
 
@@ -102,12 +103,12 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="w-72 h-72 md:w-80 md:h-80 rounded-full p-1.5 border-2 border-accent luminous-card overflow-hidden group shadow-[0_0_30px_rgba(255,255,255,0.15)]"
+              className="w-72 h-72 md:w-96 md:h-96 aspect-square rounded-none p-1.5 border-2 border-accent luminous-card overflow-hidden group shadow-[0_0_30px_rgba(255,255,255,0.15)]"
             >
               <img
                 src="/My Picture.png"
                 alt="Abdul Azeez - Profile"
-                className="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-1000"
+                className="w-full h-full aspect-square object-cover object-[center_55%] scale-95 rounded-none group-hover:scale-100 transition-transform duration-1000"
               />
             </motion.div>
           </div>
@@ -117,3 +118,15 @@ export default function About() {
     </section>
   );
 }
+```
+
+The profile section is now:
+
+* **Mobile:** `288 × 288`
+* **Desktop:** `384 × 384`
+* **Shape:** square
+* **Outline:** 2px accent border
+* **Image:** slightly zoomed out with `scale-95`
+* **Position:** slightly downward with `object-[center_55%]`
+* **Hover:** returns to normal scale
+* **No `rounded-full`** anywhere on the image/profile container.
