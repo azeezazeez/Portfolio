@@ -67,32 +67,7 @@ export default function About() {
                 </div>
 
               </div>
-
-              {/* Resume Buttons */}
-              <div className="flex flex-wrap gap-4 pt-4">
-
-                {/* Download Resume */}
-                <a
-                  href="https://drive.google.com/uc?export=download&id=1xoBxHhTHM8Tz26tctA27aTHgrr8tqKG_"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-bold text-sm transition-all duration-300 hover:scale-105 bg-page-text text-page-bg"
-                >
-                  Download Resume
-                </a>
-
-                {/* View Resume */}
-                <a
-                  href="https://drive.google.com/file/d/1xoBxHhTHM8Tz26tctA27aTHgrr8tqKG_/view?usp=drivesdk"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-lg font-bold text-sm transition-all duration-300 hover:scale-105 border border-page-text/20"
-                >
-                  View Resume
-                </a>
-
-              </div>
-            </motion.div>
+            
           </div>
 
           {/* Profile Image */}
