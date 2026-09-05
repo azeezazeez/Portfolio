@@ -78,7 +78,7 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="w-72 h-72 md:w-96 md:h-96 aspect-square overflow-hidden group"
+              className="w-72 h-72 md:w-96 md:h-96 aspect-square overflow-hidden group rounded-2xl"
             >
               <img
                 src="/My Picture.png"
