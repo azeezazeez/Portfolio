@@ -105,7 +105,7 @@ export default function About() {
               className="w-72 h-72 md:w-80 md:h-80 rounded-full p-1.5 border-2 border-accent luminous-card overflow-hidden group shadow-[0_0_30px_rgba(255,255,255,0.15)]"
             >
               <img
-                src="/My%20Picture.jpg"
+                src="/My Picture.png"
                 alt="Abdul Azeez - Profile"
                 className="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-1000"
               />
