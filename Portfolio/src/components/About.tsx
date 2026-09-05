@@ -96,18 +96,18 @@ export default function About() {
           </div>
 
           {/* Profile Image */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 flex justify-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="luminous-card !p-1.5 rounded-2xl overflow-hidden group"
+              className="w-72 h-72 md:w-80 md:h-80 rounded-full p-1.5 border-2 border-accent luminous-card overflow-hidden group shadow-[0_0_30px_rgba(255,255,255,0.15)]"
             >
               <img
-                src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?auto=format&fit=crop&w=1000&q=80"
+                src="/My%20Picture.jpg"
                 alt="Abdul Azeez - Profile"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                className="w-full h-full object-cover rounded-full group-hover:scale-105 transition-transform duration-1000"
               />
             </motion.div>
           </div>
