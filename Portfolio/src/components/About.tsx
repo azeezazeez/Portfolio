@@ -78,12 +78,12 @@ export default function About() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="w-72 h-72 md:w-96 md:h-96 aspect-square overflow-hidden group rounded-lg"
+              className="w-72 h-72 md:w-96 md:h-96 aspect-square overflow-hidden group"
             >
               <img
                 src="/My Picture.png"
                 alt="Abdul Azeez - Profile"
-                className="w-full h-full aspect-square object-cover object-[center_25%] scale-95 group-hover:scale-100 transition-transform duration-1000"
+                className="w-full h-full aspect-square object-cover object-[center_25%] scale-95 group-hover:scale-100 transition-transform duration-1000 rounded-lg"
               />
             </motion.div>
           </div>
