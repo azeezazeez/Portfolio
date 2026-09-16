@@ -5,7 +5,6 @@
 *“Building scalable web solutions with clean code and modern design.”*
 
 **🔗 Live Portfolio:** [https://abdul-azeez.vercel.app](https://abdul-azeez.vercel.app)  
-*(Replace with your actual deployed portfolio link)*
 
 Welcome to the source code of my personal portfolio website. This project is a fully responsive, modern web application that introduces who I am, showcases my technical expertise, highlights key projects, and provides an easy way to connect with me.
 
