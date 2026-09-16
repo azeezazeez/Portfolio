@@ -1,6 +1,8 @@
+<div align = 'center'>
+
 # 👨‍💻 Abdul Azeez | Software Developer Portfolio
 
-> *“Building scalable web solutions with clean code and modern design.”*
+*“Building scalable web solutions with clean code and modern design.”*
 
 **🔗 Live Portfolio:** [https://abdul-azeez.vercel.app](https://abdul-azeez.vercel.app)  
 *(Replace with your actual deployed portfolio link)*
@@ -8,21 +10,7 @@
 Welcome to the source code of my personal portfolio website. This project is a fully responsive, modern web application that introduces who I am, showcases my technical expertise, highlights key projects, and provides an easy way to connect with me.
 
 ---
-
-## 📸 Portfolio Sneak Peek
-
-| Section | Preview |
-|---------|---------|
-| **Intro / Hero** | ![Intro](https://drive.google.com/uc?export=view&id=1tK3SUHXarpJIv-UUBi5cc4-x2OQLhqD1) |
-| **Technical Summary** | ![Tech Summary](https://drive.google.com/uc?export=view&id=1QigIzY39s8hAcZDQhiyyWRWTdS-IrfMl) |
-| **Tech Stack** | ![Tech Stack](https://drive.google.com/uc?export=view&id=1RCQGedvBUHDjjQBeJo5cxHg5H48RNiNZ) |
-| **Experience** | ![Experience](https://drive.google.com/uc?export=view&id=1RCQGedvBUHDjjQBeJo5cxHg5H48RNiNZ) |
-| **Projects** | ![Projects](https://drive.google.com/uc?export=view&id=1fbQe-FchKbsC921b-bA3XfNlAq_FTffd) |
-| **Academics** | ![Academics](https://drive.google.com/uc?export=view&id=1pWAISKt4UuYp1sdgoNuwf3LY7oUth3R4) |
-| **Get in Touch** | ![Contact](https://drive.google.com/uc?export=view&id=1aLdePIU0MHJEY0p_fF7Ng5Oou-cEDtZR) |
-| **About Me** | ![About](https://drive.google.com/uc?export=view&id=1-WjC62o70Ijjw4s5vf_ZzpFR_13tK1tC) |
-
----
+</div>
 
 ## ✨ Key Features
 
@@ -64,8 +52,18 @@ Welcome to the source code of my personal portfolio website. This project is a f
 
 ## 🚀 Featured Projects
 
-### 🛒 Cartify – E-Commerce Web Application  
-**Live Demo:** [https://cartify-cart.vercel.app](https://cartify-cart.vercel.app)  
+### ✧ Twinkle AI – Chatbot Assistant *(Lightning Fast)*  
+**Live Demo:** [https://twinkleai.vercel.app](https://twinkleai.vercel.app)  
+
+
+* ✧ **AI-powered chatbot** built with **React + Spring Boot**
+* ⚡ Powered by **Groq’s ultra-low-latency inference** using **OpenAI GPT-OSS 20B**
+* 🚀 Delivers **ultra-fast AI responses** at speeds of up to **~1,000 tokens/second**
+* 💬 Provides a **real-time conversational interface** for smooth and responsive interaction
+* ✨ **Twinkle AI** branding represents **speed, intelligence, and innovation**
+
+### 🛒 Zyphora – E-Commerce Web Application  
+**Live Demo:** [https://zyphora-cart.vercel.app](https://zyphora-cart.vercel.app)  
 *(Note: Initial load may take a few seconds)*  
 
 
@@ -77,7 +75,7 @@ Welcome to the source code of my personal portfolio website. This project is a f
 
 
 ### 📝 EduExam – Online Examination System  
-**Live Demo:** [https://eduexam-exam.vercel.app](https://eduexam-exam.vercel.app)  
+**Github:** [https://github.com/](https://github.com)  
 
 
 * 🌐 **Full-stack online examination platform** developed using **Java Full Stack**
@@ -86,18 +84,6 @@ Welcome to the source code of my personal portfolio website. This project is a f
 * 📊 Includes a **performance dashboard** for analyzing exam results
 * 🔐 Supports **secure exam management** for students and administrators
  
-
-### ✧ Twinkle AI – Chatbot Assistant *(Lightning Fast)*  
-**Live Demo:** [https://twinkleai.vercel.app](https://twinkleai.vercel.app)  
-
-
-* ✧ **AI-powered chatbot** built with **React + Spring Boot**
-* ⚡ Powered by **Groq’s ultra-low-latency inference** using **OpenAI GPT-OSS 20B**
-* 🚀 Delivers **ultra-fast AI responses** at speeds of up to **~1,000 tokens/second**
-* 💬 Provides a **real-time conversational interface** for smooth and responsive interaction
-* ✨ **Twinkle AI** branding represents **speed, intelligence, and innovation**
-
-
 ---
 
 ## 📞 Let's Connect
