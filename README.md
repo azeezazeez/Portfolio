@@ -52,7 +52,8 @@ Welcome to the source code of my personal portfolio website. This project is a f
 
 ## 🚀 Featured Projects
 
-### ✧ Twinkle AI – Chatbot Assistant *(Lightning Fast)*  
+### ✧ Twinkle AI – Chatbot Assistant *(Lightning Fast)* 
+
 **Live Demo:** [https://twinkleai.vercel.app](https://twinkleai.vercel.app)  
 
 **Github:** [https://github.com/azeezazeez/Twinkle-AI](https://github.com/azeezazeez/Twinkle-AI) 
@@ -64,6 +65,7 @@ Welcome to the source code of my personal portfolio website. This project is a f
 * ✨ **Twinkle AI** branding represents **speed, intelligence, and innovation**
 
 ### 🛒 Zyphora – E-Commerce Web Application  
+
 **Live Demo:** [https://zyphora-cart.vercel.app](https://zyphora-cart.vercel.app)
 
 **Github:** [https://github.com/azeezazeez/Zyphora-Ecommerce](https://github.com/azeezazeez/Zyphora-Ecommerce)
@@ -80,6 +82,7 @@ Welcome to the source code of my personal portfolio website. This project is a f
 
 
 ### 📝 EduExam – Online Examination System  
+
 **Github:** [https://github.com/azeezazeez/EduExam-Online-Examination-System](https://github.com/azeezazeez/EduExam-Online-Examination-System)  
 
 
