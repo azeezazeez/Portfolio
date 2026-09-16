@@ -4,7 +4,9 @@ export const projectList: ProjectItem[] = [
   {
     id: 'project-1',
     number: 'PROJECT 01',
+
     title: 'ZYPHORA E-COMMERCE',
+
     tagline: 'Full-Stack E-Commerce Platform',
 
     description:
@@ -29,8 +31,9 @@ export const projectList: ProjectItem[] = [
 
     theme: 'rose',
 
+    // Your original Google Drive sharing URL
     imageUrl:
-      'https://drive.google.com/thumbnail?id=1jfkDXIh-7LwFBTNeor8HRK2GNkcIRV17&sz=w1600',
+      'https://drive.google.com/file/d/1jfkDXIh-7LwFBTNeor8HRK2GNkcIRV17/view?usp=sharing',
 
     metrics:
       'JWT Authentication • Role-Based Authorization',
@@ -44,7 +47,9 @@ export const projectList: ProjectItem[] = [
   {
     id: 'project-2',
     number: 'PROJECT 02',
+
     title: 'TWINKLE AI',
+
     tagline: 'AI-Powered Conversational Assistant',
 
     description:
@@ -68,8 +73,9 @@ export const projectList: ProjectItem[] = [
 
     theme: 'blue',
 
+    // Your original Google Drive sharing URL
     imageUrl:
-      'https://drive.google.com/thumbnail?id=1bi6tnT-9wEYB09rf1rvwzzqSl5QoQXIz&sz=w1600',
+      'https://drive.google.com/file/d/1bi6tnT-9wEYB09rf1rvwzzqSl5QoQXIz/view?usp=sharing',
 
     metrics:
       'AI Integration • Redis Caching',
