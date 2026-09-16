@@ -113,7 +113,7 @@ export const Experience: React.FC = () => {
                   {/* Certificate Link */}
                   <div className="pt-1">
                     <a
-                      href="/Java%20Full%20Stack.pdf"
+                      href="/Java%20Full%20Stack.png"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#172033] dark:text-[#F1F5F9] hover:text-[#E88AA8] dark:hover:text-[#F49DB7] transition-colors duration-200"
