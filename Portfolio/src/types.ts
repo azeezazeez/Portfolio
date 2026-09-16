@@ -56,7 +56,21 @@ export interface ProjectItem {
   githubUrl: string;
   liveUrl: string;
   theme: 'rose' | 'blue' | 'white';
+
+  /*
+   * Real project screenshot.
+   *
+   * This can be a Google Drive image URL or a local
+   * path such as /projects/zyphora.png.
+   */
+  imageUrl: string;
+
   metrics?: string;
+
+  /*
+   * Kept for compatibility with the existing project
+   * structure and any other component that may use it.
+   */
   preview: {
     type: 'ai-chat' | 'task-engine' | 'dashboard' | 'api-search';
     badge: string;
