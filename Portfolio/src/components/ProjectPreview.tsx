@@ -7,28 +7,21 @@ interface ProjectPreviewProps {
 }
 
 /**
- * Converts a Google Drive sharing URL into a
- * browser-displayable thumbnail URL.
- *
- * Example:
- *
- * https://drive.google.com/file/d/FILE_ID/view?usp=sharing
- *
- * becomes:
- *
- * https://drive.google.com/thumbnail?id=FILE_ID&sz=w1600
+ * Converts a Google Drive sharing URL into a browser-displayable
+ * Google Drive thumbnail URL.
  */
 const getGoogleDriveImageUrl = (url: string): string => {
   if (!url) {
     return '';
   }
 
-  // Already a thumbnail URL
+  // Already a Google Drive thumbnail URL
   if (url.includes('drive.google.com/thumbnail')) {
     return url;
   }
 
-  // Extract /file/d/FILE_ID/
+  // Standard Google Drive sharing URL:
+  // https://drive.google.com/file/d/FILE_ID/view?usp=sharing
   const fileIdMatch = url.match(
     /drive\.google\.com\/file\/d\/([^/?#]+)/
   );
@@ -37,7 +30,8 @@ const getGoogleDriveImageUrl = (url: string): string => {
     return `https://drive.google.com/thumbnail?id=${fileIdMatch[1]}&sz=w1600`;
   }
 
-  // Extract ?id=FILE_ID
+  // Alternative Google Drive URL:
+  // https://drive.google.com/open?id=FILE_ID
   try {
     const parsedUrl = new URL(url);
     const id = parsedUrl.searchParams.get('id');
@@ -46,13 +40,13 @@ const getGoogleDriveImageUrl = (url: string): string => {
       return `https://drive.google.com/thumbnail?id=${id}&sz=w1600`;
     }
   } catch {
-    // Ignore invalid URL and return the original URL below
+    // Ignore invalid URLs.
   }
 
   return url;
 };
 
-const ProjectPreview: React.FC<ProjectPreviewProps> = ({
+export const ProjectPreview: React.FC<ProjectPreviewProps> = ({
   project,
 }) => {
   const [imageError, setImageError] = useState(false);
@@ -68,46 +62,25 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
     rose: {
       background:
         'bg-gradient-to-br from-rose-50 via-white to-pink-100',
-
       border: 'border-rose-200',
-
       glow: 'bg-rose-300/20',
-
-      badge:
-        'border-rose-200 bg-rose-50 text-rose-600',
-
-      icon:
-        'bg-rose-100 text-rose-600',
+      icon: 'bg-rose-100 text-rose-600',
     },
 
     blue: {
       background:
         'bg-gradient-to-br from-blue-50 via-white to-sky-100',
-
       border: 'border-blue-200',
-
       glow: 'bg-blue-300/20',
-
-      badge:
-        'border-blue-200 bg-blue-50 text-blue-600',
-
-      icon:
-        'bg-blue-100 text-blue-600',
+      icon: 'bg-blue-100 text-blue-600',
     },
 
     white: {
       background:
         'bg-gradient-to-br from-slate-50 via-white to-gray-100',
-
       border: 'border-slate-200',
-
       glow: 'bg-slate-300/20',
-
-      badge:
-        'border-slate-200 bg-slate-50 text-slate-600',
-
-      icon:
-        'bg-slate-100 text-slate-600',
+      icon: 'bg-slate-100 text-slate-600',
     },
   };
 
@@ -128,7 +101,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
         shadow-sm
       `}
     >
-      {/* Background decoration */}
+      {/* Decorative glow */}
 
       <div
         className={`
@@ -158,7 +131,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
         `}
       />
 
-      {/* Browser Header */}
+      {/* Browser header */}
 
       <div
         className="
@@ -176,9 +149,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
         "
       >
         <span className="h-2.5 w-2.5 rounded-full bg-red-300" />
-
         <span className="h-2.5 w-2.5 rounded-full bg-yellow-300" />
-
         <span className="h-2.5 w-2.5 rounded-full bg-green-300" />
 
         <div
@@ -207,7 +178,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
         </div>
       </div>
 
-      {/* Screenshot Area */}
+      {/* Project screenshot */}
 
       <div
         className="
@@ -236,12 +207,9 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
               ease-out
               group-hover:scale-[1.025]
             "
-            onError={() => {
-              setImageError(true);
-            }}
+            onError={() => setImageError(true)}
           />
         ) : (
-          /* Image fallback */
           <div
             className="
               absolute
@@ -295,8 +263,6 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
             "
           >
             <div className="flex items-center justify-between gap-3">
-              {/* Project badge */}
-
               <div
                 className="
                   rounded-full
@@ -321,8 +287,6 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
                   {project.preview.badge}
                 </span>
               </div>
-
-              {/* Live project button */}
 
               <a
                 href={project.liveUrl}
@@ -357,5 +321,3 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
     </div>
   );
 };
-
-export default ProjectPreview;
