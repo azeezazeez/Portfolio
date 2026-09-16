@@ -38,7 +38,7 @@ export const Footer: React.FC = () => {
       <div className="mx-auto max-w-5xl space-y-10">
 
         {/* =====================================================
-            TOP FOOTER CONTENT
+            BRAND / NAV / SOCIALS
             ===================================================== */}
 
         <div
@@ -51,7 +51,7 @@ export const Footer: React.FC = () => {
             md:items-center
           "
         >
-          {/* Brand and Role */}
+          {/* Brand */}
 
           <div>
             <div className="flex items-center gap-2">
@@ -91,7 +91,7 @@ export const Footer: React.FC = () => {
             </p>
           </div>
 
-          {/* Navigation links */}
+          {/* Navigation */}
 
           <nav
             aria-label="Footer Navigation"
@@ -112,6 +112,7 @@ export const Footer: React.FC = () => {
                   font-medium
                   text-[#667085]
                   transition-colors
+                  duration-200
                   hover:text-[#172033]
                   dark:text-[#94A3B8]
                   dark:hover:text-[#F1F5F9]
@@ -127,120 +128,144 @@ export const Footer: React.FC = () => {
               SOCIAL LINKS
               =================================================== */}
 
-          <div className="flex items-center gap-4">
+          <div
+            className="
+              flex
+              items-center
+              gap-4
+            "
+          >
 
-            {/* GitHub */}
+            {/* =================================================
+                GITHUB + DOT
+                ================================================= */}
 
-            <a
-              href={personalData.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                group
-                text-xs
-                font-semibold
-                text-[#667085]
-                transition-colors
-                hover:text-[#172033]
-                focus:outline-none
-                focus-visible:text-[#172033]
-                dark:text-[#94A3B8]
-                dark:hover:text-[#F1F5F9]
-                dark:focus-visible:text-[#F1F5F9]
-              "
-            >
-              GitHub
-            </a>
+            <div className="group flex items-center gap-4">
+              <a
+                href={personalData.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  text-xs
+                  font-semibold
+                  text-[#667085]
+                  transition-colors
+                  duration-200
+                  hover:text-[#172033]
+                  focus:outline-none
+                  dark:text-[#94A3B8]
+                  dark:hover:text-[#F1F5F9]
+                "
+              >
+                GitHub
+              </a>
 
-            {/* GitHub / LinkedIn separator */}
+              <span
+                aria-hidden="true"
+                className="
+                  block
+                  h-1.5
+                  w-1.5
+                  shrink-0
+                  rounded-full
+                  bg-[#CBD5E1]
+                  transition-all
+                  duration-200
+                  group-hover:bg-emerald-500
+                  group-hover:scale-125
+                  dark:bg-[#33435C]
+                  dark:group-hover:bg-emerald-500
+                "
+              />
+            </div>
 
-            <span
-              aria-hidden="true"
-              className="
-                h-1.5
-                w-1.5
-                rounded-full
-                bg-[#CBD5E1]
-                transition-all
-                duration-200
-                dark:bg-[#33435C]
-                peer-hover:bg-emerald-500
-              "
-            />
+            {/* =================================================
+                LINKEDIN + DOT
+                ================================================= */}
 
-            {/* LinkedIn */}
+            <div className="group flex items-center gap-4">
+              <a
+                href={personalData.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  text-xs
+                  font-semibold
+                  text-[#667085]
+                  transition-colors
+                  duration-200
+                  hover:text-[#172033]
+                  focus:outline-none
+                  dark:text-[#94A3B8]
+                  dark:hover:text-[#F1F5F9]
+                "
+              >
+                LinkedIn
+              </a>
 
-            <a
-              href={personalData.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="
-                group
-                text-xs
-                font-semibold
-                text-[#667085]
-                transition-colors
-                hover:text-[#172033]
-                focus:outline-none
-                focus-visible:text-[#172033]
-                dark:text-[#94A3B8]
-                dark:hover:text-[#F1F5F9]
-                dark:focus-visible:text-[#F1F5F9]
-              "
-            >
-              LinkedIn
-            </a>
+              <span
+                aria-hidden="true"
+                className="
+                  block
+                  h-1.5
+                  w-1.5
+                  shrink-0
+                  rounded-full
+                  bg-[#CBD5E1]
+                  transition-all
+                  duration-200
+                  group-hover:bg-emerald-500
+                  group-hover:scale-125
+                  dark:bg-[#33435C]
+                  dark:group-hover:bg-emerald-500
+                "
+              />
+            </div>
 
-            {/* LinkedIn / Email separator */}
+            {/* =================================================
+                EMAIL + DOT
+                ================================================= */}
 
-            <span
-              aria-hidden="true"
-              className="
-                h-1.5
-                w-1.5
-                rounded-full
-                bg-[#CBD5E1]
-                transition-all
-                duration-200
-                dark:bg-[#33435C]
-              "
-            />
+            <div className="group flex items-center gap-4">
+              <a
+                href={`mailto:${personalData.email}`}
+                className="
+                  text-xs
+                  font-semibold
+                  text-[#667085]
+                  transition-colors
+                  duration-200
+                  hover:text-[#172033]
+                  focus:outline-none
+                  dark:text-[#94A3B8]
+                  dark:hover:text-[#F1F5F9]
+                "
+              >
+                Email
+              </a>
 
-            {/* Email */}
+              <span
+                aria-hidden="true"
+                className="
+                  block
+                  h-1.5
+                  w-1.5
+                  shrink-0
+                  rounded-full
+                  bg-[#CBD5E1]
+                  transition-all
+                  duration-200
+                  group-hover:bg-emerald-500
+                  group-hover:scale-125
+                  dark:bg-[#33435C]
+                  dark:group-hover:bg-emerald-500
+                "
+              />
+            </div>
 
-            <a
-              href={`mailto:${personalData.email}`}
-              className="
-                group
-                text-xs
-                font-semibold
-                text-[#667085]
-                transition-colors
-                hover:text-[#172033]
-                focus:outline-none
-                focus-visible:text-[#172033]
-                dark:text-[#94A3B8]
-                dark:hover:text-[#F1F5F9]
-                dark:focus-visible:text-[#F1F5F9]
-              "
-            >
-              Email
-            </a>
-
-            {/* Email / Back to top separator */}
-
-            <span
-              aria-hidden="true"
-              className="
-                h-1.5
-                w-1.5
-                rounded-full
-                bg-[#CBD5E1]
-                dark:bg-[#33435C]
-              "
-            />
-
-            {/* Back to top */}
+            {/* =================================================
+                BACK TO TOP
+                ================================================= */}
 
             <button
               type="button"
