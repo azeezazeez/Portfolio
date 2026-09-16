@@ -73,6 +73,7 @@ export const Experience: React.FC = () => {
                     <h5 className="font-mono text-xs sm:text-sm font-bold tracking-wider text-[#172033] dark:text-[#F1F5F9] uppercase">
                       {exp.role}
                     </h5>
+
                     {exp.isCurrent && (
                       <span className="text-[10px] font-semibold text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 px-2 py-0.5 rounded-full">
                         CURRENT ROLE
@@ -87,7 +88,10 @@ export const Experience: React.FC = () => {
                   {/* Bullet responsibilities */}
                   <ul className="space-y-2 pt-1 text-xs sm:text-sm text-[#667085] dark:text-[#94A3B8]">
                     {exp.responsibilities.map((resp, i) => (
-                      <li key={i} className="flex items-start gap-2.5 leading-relaxed">
+                      <li
+                        key={i}
+                        className="flex items-start gap-2.5 leading-relaxed"
+                      >
                         <span className="w-1.5 h-1.5 rounded-full bg-[#CFE3FF] dark:bg-[#2A4365] mt-2 shrink-0" />
                         <span>{resp}</span>
                       </li>
@@ -104,6 +108,19 @@ export const Experience: React.FC = () => {
                         {tech}
                       </span>
                     ))}
+                  </div>
+
+                  {/* Certificate Link */}
+                  <div className="pt-1">
+                    <a
+                      href="/Java%20Full%20Stack.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#172033] dark:text-[#F1F5F9] hover:text-[#E88AA8] dark:hover:text-[#F49DB7] transition-colors duration-200"
+                    >
+                      View
+                      <span aria-hidden="true">↗</span>
+                    </a>
                   </div>
                 </div>
               </div>
