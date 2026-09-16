@@ -1,52 +1,113 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
 import { ProjectItem } from '../types';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ImageOff } from 'lucide-react';
 
 interface ProjectPreviewProps {
   project: ProjectItem;
 }
 
-const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
-  const { theme, imageUrl } = project;
+/**
+ * Converts a Google Drive sharing URL into a
+ * browser-displayable thumbnail URL.
+ *
+ * Example:
+ *
+ * https://drive.google.com/file/d/FILE_ID/view?usp=sharing
+ *
+ * becomes:
+ *
+ * https://drive.google.com/thumbnail?id=FILE_ID&sz=w1600
+ */
+const getGoogleDriveImageUrl = (url: string): string => {
+  if (!url) {
+    return '';
+  }
+
+  // Already a thumbnail URL
+  if (url.includes('drive.google.com/thumbnail')) {
+    return url;
+  }
+
+  // Extract /file/d/FILE_ID/
+  const fileIdMatch = url.match(
+    /drive\.google\.com\/file\/d\/([^/?#]+)/
+  );
+
+  if (fileIdMatch?.[1]) {
+    return `https://drive.google.com/thumbnail?id=${fileIdMatch[1]}&sz=w1600`;
+  }
+
+  // Extract ?id=FILE_ID
+  try {
+    const parsedUrl = new URL(url);
+    const id = parsedUrl.searchParams.get('id');
+
+    if (id) {
+      return `https://drive.google.com/thumbnail?id=${id}&sz=w1600`;
+    }
+  } catch {
+    // Ignore invalid URL and return the original URL below
+  }
+
+  return url;
+};
+
+const ProjectPreview: React.FC<ProjectPreviewProps> = ({
+  project,
+}) => {
+  const [imageError, setImageError] = useState(false);
+
+  const { theme } = project;
+
+  const imageUrl = useMemo(
+    () => getGoogleDriveImageUrl(project.imageUrl),
+    [project.imageUrl]
+  );
 
   const themeStyles = {
     rose: {
       background:
         'bg-gradient-to-br from-rose-50 via-white to-pink-100',
-      accent:
-        'bg-rose-500',
-      accentLight:
+
+      border: 'border-rose-200',
+
+      glow: 'bg-rose-300/20',
+
+      badge:
+        'border-rose-200 bg-rose-50 text-rose-600',
+
+      icon:
         'bg-rose-100 text-rose-600',
-      border:
-        'border-rose-200',
-      glow:
-        'bg-rose-300/20',
     },
 
     blue: {
       background:
         'bg-gradient-to-br from-blue-50 via-white to-sky-100',
-      accent:
-        'bg-blue-500',
-      accentLight:
+
+      border: 'border-blue-200',
+
+      glow: 'bg-blue-300/20',
+
+      badge:
+        'border-blue-200 bg-blue-50 text-blue-600',
+
+      icon:
         'bg-blue-100 text-blue-600',
-      border:
-        'border-blue-200',
-      glow:
-        'bg-blue-300/20',
     },
 
     white: {
       background:
         'bg-gradient-to-br from-slate-50 via-white to-gray-100',
-      accent:
-        'bg-slate-500',
-      accentLight:
+
+      border: 'border-slate-200',
+
+      glow: 'bg-slate-300/20',
+
+      badge:
+        'border-slate-200 bg-slate-50 text-slate-600',
+
+      icon:
         'bg-slate-100 text-slate-600',
-      border:
-        'border-slate-200',
-      glow:
-        'bg-slate-300/20',
     },
   };
 
@@ -67,7 +128,8 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
         shadow-sm
       `}
     >
-      {/* Decorative background glow */}
+      {/* Background decoration */}
+
       <div
         className={`
           pointer-events-none
@@ -97,89 +159,149 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
       />
 
       {/* Browser Header */}
-      <div className="relative z-10 flex h-10 items-center gap-2 border-b border-black/5 bg-white/80 px-4 backdrop-blur-md">
+
+      <div
+        className="
+          relative
+          z-20
+          flex
+          h-10
+          items-center
+          gap-2
+          border-b
+          border-black/5
+          bg-white/80
+          px-4
+          backdrop-blur-md
+        "
+      >
         <span className="h-2.5 w-2.5 rounded-full bg-red-300" />
+
         <span className="h-2.5 w-2.5 rounded-full bg-yellow-300" />
+
         <span className="h-2.5 w-2.5 rounded-full bg-green-300" />
 
-        <div className="ml-3 flex h-6 flex-1 items-center rounded-md bg-black/[0.035] px-3">
-          <span className="truncate text-[9px] font-medium tracking-wide text-slate-400">
+        <div
+          className="
+            ml-3
+            flex
+            h-6
+            flex-1
+            items-center
+            rounded-md
+            bg-black/[0.035]
+            px-3
+          "
+        >
+          <span
+            className="
+              truncate
+              text-[9px]
+              font-medium
+              tracking-wide
+              text-slate-400
+            "
+          >
             {project.liveUrl}
           </span>
         </div>
       </div>
 
-      {/* Actual Project Screenshot */}
-      <div className="relative h-[calc(100%-40px)] overflow-hidden">
-        <img
-          src={imageUrl}
-          alt={`${project.title} project screenshot`}
-          loading="lazy"
-          draggable={false}
-          className="
-            absolute
-            inset-0
-            h-full
-            w-full
-            object-cover
-            object-top
-            transition-transform
-            duration-700
-            ease-out
-            group-hover:scale-[1.025]
-          "
-          onError={(event) => {
-            const target = event.currentTarget;
+      {/* Screenshot Area */}
 
-            target.style.display = 'none';
+      <div
+        className="
+          relative
+          h-[calc(100%-40px)]
+          overflow-hidden
+          bg-white
+        "
+      >
+        {!imageError && imageUrl ? (
+          <img
+            src={imageUrl}
+            alt={`${project.title} project screenshot`}
+            loading="lazy"
+            draggable={false}
+            referrerPolicy="no-referrer"
+            className="
+              absolute
+              inset-0
+              h-full
+              w-full
+              object-cover
+              object-top
+              transition-transform
+              duration-700
+              ease-out
+              group-hover:scale-[1.025]
+            "
+            onError={() => {
+              setImageError(true);
+            }}
+          />
+        ) : (
+          /* Image fallback */
+          <div
+            className="
+              absolute
+              inset-0
+              flex
+              items-center
+              justify-center
+              bg-white
+            "
+          >
+            <div className="text-center">
+              <div
+                className={`
+                  mx-auto
+                  mb-4
+                  flex
+                  h-14
+                  w-14
+                  items-center
+                  justify-center
+                  rounded-full
+                  ${currentTheme.icon}
+                `}
+              >
+                <ImageOff size={22} />
+              </div>
 
-            const fallback =
-              target.parentElement?.querySelector(
-                '[data-image-fallback]'
-              ) as HTMLElement | null;
+              <p className="text-sm font-semibold text-slate-700">
+                {project.title}
+              </p>
 
-            if (fallback) {
-              fallback.style.display = 'flex';
-            }
-          }}
-        />
-
-        {/* Fallback */}
-        <div
-          data-image-fallback
-          className="absolute inset-0 hidden items-center justify-center bg-white/80 p-8 text-center backdrop-blur-sm"
-        >
-          <div>
-            <div
-              className={`
-                mx-auto mb-4 flex h-12 w-12
-                items-center justify-center
-                rounded-full
-                ${currentTheme.accentLight}
-              `}
-            >
-              <ArrowUpRight size={20} />
+              <p className="mt-1 text-xs text-slate-400">
+                Unable to load project screenshot
+              </p>
             </div>
-
-            <p className="text-sm font-semibold text-slate-700">
-              {project.title}
-            </p>
-
-            <p className="mt-1 text-xs text-slate-400">
-              Project preview unavailable
-            </p>
           </div>
-        </div>
+        )}
 
-        {/* Bottom Overlay */}
+        {/* Bottom overlay */}
+
         <div className="absolute inset-x-0 bottom-0 z-20">
-          <div className="bg-gradient-to-t from-black/50 via-black/10 to-transparent px-4 pb-4 pt-12">
+          <div
+            className="
+              bg-gradient-to-t
+              from-black/55
+              via-black/10
+              to-transparent
+              px-4
+              pb-4
+              pt-16
+            "
+          >
             <div className="flex items-center justify-between gap-3">
+              {/* Project badge */}
+
               <div
                 className="
                   rounded-full
                   border
-                  border-white/20
+                  border-white/30
                   bg-white/90
                   px-3
                   py-1.5
@@ -187,10 +309,20 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({ project }) => {
                   backdrop-blur-md
                 "
               >
-                <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-700">
+                <span
+                  className="
+                    text-[10px]
+                    font-semibold
+                    uppercase
+                    tracking-wider
+                    text-slate-700
+                  "
+                >
                   {project.preview.badge}
                 </span>
               </div>
+
+              {/* Live project button */}
 
               <a
                 href={project.liveUrl}
