@@ -58,10 +58,9 @@ export interface ProjectItem {
   theme: 'rose' | 'blue' | 'white';
   metrics?: string;
 
-  // Actual project screenshot
+  // Google Drive sharing URL
   imageUrl: string;
 
-  // Kept for compatibility with the existing project structure
   preview: {
     type: 'ai-chat' | 'task-engine' | 'dashboard' | 'api-search';
     badge: string;
