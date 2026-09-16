@@ -75,7 +75,7 @@ Welcome to the source code of my personal portfolio website. This project is a f
 
 
 ### 📝 EduExam – Online Examination System  
-**Github:** [https://github.com/](https://github.com)  
+**Github:** [https://github.com/azeezazeez/EduExam-Online-Examination-System](https://github.com/azeezazeez/EduExam-Online-Examination-System)  
 
 
 * 🌐 **Full-stack online examination platform** developed using **Java Full Stack**
