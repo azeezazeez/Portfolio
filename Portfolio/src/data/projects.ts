@@ -18,7 +18,7 @@ export const projectList: ProjectItem[] = [
       'Spring Boot',
       'React',
       'PostgreSQL',
-      'JWT'
+      'JWT',
     ],
 
     githubUrl:
@@ -30,15 +30,15 @@ export const projectList: ProjectItem[] = [
     theme: 'rose',
 
     imageUrl:
-      'https://drive.google.com/uc?export=view&id=1jfkDXIh-7LwFBTNeor8HRK2GNkcIRV17',
+      'https://drive.google.com/thumbnail?id=1jfkDXIh-7LwFBTNeor8HRK2GNkcIRV17&sz=w1600',
 
     metrics:
       'JWT Authentication • Role-Based Authorization',
 
     preview: {
       type: 'dashboard',
-      badge: 'Full-Stack E-Commerce'
-    }
+      badge: 'Full-Stack E-Commerce',
+    },
   },
 
   {
@@ -57,7 +57,7 @@ export const projectList: ProjectItem[] = [
       'Java',
       'Spring Boot',
       'Groq AI',
-      'Redis'
+      'Redis',
     ],
 
     githubUrl:
@@ -69,14 +69,14 @@ export const projectList: ProjectItem[] = [
     theme: 'blue',
 
     imageUrl:
-      'https://drive.google.com/uc?export=view&id=1bi6tnT-9wEYB09rf1rvwzzqSl5QoQXIz',
+      'https://drive.google.com/thumbnail?id=1bi6tnT-9wEYB09rf1rvwzzqSl5QoQXIz&sz=w1600',
 
     metrics:
       'AI Integration • Redis Caching',
 
     preview: {
       type: 'ai-chat',
-      badge: 'AI Assistant'
-    }
-  }
+      badge: 'AI Assistant',
+    },
+  },
 ];
