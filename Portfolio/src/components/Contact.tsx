@@ -167,7 +167,7 @@ export const Contact: React.FC = () => {
                     required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    placeholder="Jane Doe"
+                    placeholder="Abdul Azeez"
                     className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#E2E8F0] dark:border-[#243048] bg-[#F8FAFC] dark:bg-[#0E141F] text-[#172033] dark:text-[#F1F5F9] placeholder:text-[#94A3B8] dark:placeholder:text-[#64748B] focus:bg-white dark:focus:bg-[#131A26] focus:outline-none focus:border-[#6EA8E8] dark:focus:border-[#82BAF6] transition-colors"
                   />
                 </div>
@@ -182,7 +182,7 @@ export const Contact: React.FC = () => {
                     required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    placeholder="jane@example.com"
+                    placeholder="azeez@example.com"
                     className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#E2E8F0] dark:border-[#243048] bg-[#F8FAFC] dark:bg-[#0E141F] text-[#172033] dark:text-[#F1F5F9] placeholder:text-[#94A3B8] dark:placeholder:text-[#64748B] focus:bg-white dark:focus:bg-[#131A26] focus:outline-none focus:border-[#6EA8E8] dark:focus:border-[#82BAF6] transition-colors"
                   />
                 </div>
