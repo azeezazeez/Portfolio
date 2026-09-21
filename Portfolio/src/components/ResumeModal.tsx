@@ -115,12 +115,12 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
     phone: '+91 7989284581',
 
     summary:
-      'Entry-level Java Developer with hands-on experience building backend applications using Java, Spring Boot, Spring Security, REST APIs, PostgreSQL, Redis, and microservices. Experienced in API development, testing, debugging, performance optimization, Docker, and CI/CD. Built and deployed full-stack applications integrating Java backends with React frontends, with a strong foundation in object-oriented programming and Agile development.',
+      'Entry-level Java Developer with hands-on experience in Java, Spring Boot, Spring Security, REST APIs, PostgreSQL, Redis, and AI API integrations. Experienced in building secure backend services, authentication, database persistence, API integration, validation, debugging, Docker, and CI/CD. Built and deployed full-stack applications with Java backends and React frontends.',
 
     technicalSkills: [
       {
         category: 'Languages',
-        skills: 'Java, JavaScript, HTML, CSS',
+        skills: 'Java, JavaScript, TypeScript, HTML, CSS',
       },
       {
         category: 'Core Java',
@@ -130,7 +130,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
       {
         category: 'Backend',
         skills:
-          'Spring Boot, Spring MVC, Spring Security, Hibernate/JPA, REST APIs, JWT',
+          'Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate, REST APIs, Spring Session',
       },
       {
         category: 'Databases',
@@ -138,7 +138,11 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
       },
       {
         category: 'Architecture',
-        skills: 'Microservices, API Integration',
+        skills: 'Layered Architecture, RESTful Architecture, API Integration',
+      },
+      {
+        category: 'AI and APIs',
+        skills: 'Groq AI API, Google Gemini API, OpenAPI, Swagger',
       },
       {
         category: 'Tools',
@@ -148,7 +152,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
       {
         category: 'Practices',
         skills:
-          'Agile, Software Development, Testing, Debugging, Troubleshooting',
+          'Agile, Software Development, Testing, Debugging, Troubleshooting, Validation',
       },
     ],
 
@@ -159,15 +163,11 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
       location: 'Hyderabad, Telangana',
 
       responsibilities: [
-        'Developed and tested 10+ REST APIs using Spring Boot, Spring Security, and JWT, implementing role-based access control for secure backend services.',
-
-        'Troubleshot and debugged backend issues, tested APIs using Postman, and resolved API integration problems to improve application reliability.',
-
-        'Optimized PostgreSQL queries and implemented Redis caching, reducing API response time by 30%.',
-
-        'Developed backend services using microservices architecture and supported application deployment using Docker and GitHub Actions CI/CD.',
-
-        'Created Swagger API documentation and collaborated with the development team following Agile software development practices.',
+        'Developed 50+ REST APIs using Java, Spring Boot, and Spring Security, with authentication and validation.',
+        'Built backend services using JPA, Hibernate, and PostgreSQL, optimizing queries for performance.',
+        'Implemented Redis caching, reducing API response time by 30%.',
+        'Debugged backend and API issues using Postman, improving application reliability.',
+        'Created Swagger/OpenAPI documentation and supported Docker and GitHub Actions CI/CD deployment.',
       ],
     },
 
@@ -181,50 +181,48 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
         title: 'Zyphora – E-Commerce Full Stack Web Application',
 
         technologies:
-          'Java, Spring Boot, Spring Security, JWT, PostgreSQL, React, Swagger',
+          'Java, Spring Boot, Spring Security, JWT, PostgreSQL, React, TypeScript, Docker',
 
         github:
-          'https://github.com/azeezazeez/Zyphora-AI',
+          'https://github.com/azeezazeez/Zyphora-Ecommerce',
 
-        live: 'https://zyphora-cart.vercel.app/',
+        live: 'https://zyphora-cart.vercel.app',
 
         description: [
-          'Developed a full-stack E-commerce application using Spring Boot and React, implementing JWT authentication and role-based access control for secure user and admin operations.',
-
-          'Designed and tested 10+ REST APIs, optimized PostgreSQL database queries, and documented APIs using Swagger for efficient frontend-backend integration.',
+          'Developed a full-stack E-commerce application using Spring Boot, PostgreSQL, and React, implementing JWT authentication, role-based authorization, email OTP verification, and secure password management.',
+          'Built 30+ REST APIs covering authentication, products, cart, wishlist, orders, customer management, and admin operations, with validation, exception handling, and PostgreSQL persistence.',
         ],
       },
 
       {
-        title: 'Twinkle AI – AI Chatbot Full Stack Web Application',
+        title: 'Twinkle AI – Multi-Model AI Platform',
 
         technologies:
-          'Java, Spring Boot, PostgreSQL, Redis, Groq AI API, React',
+          'Java, Spring Boot, Spring Session, Redis, PostgreSQL, Groq AI, Google Gemini, React, TypeScript, Docker',
 
         github:
           'https://github.com/azeezazeez/Twinkle-AI',
 
-        live: 'https://twinkleai.vercel.app/',
+        live: 'https://twinkleai.vercel.app',
 
         description: [
-          'Developed a Java-based AI chatbot using Spring Boot and Groq AI API, implementing session management, chat history, and REST API integration with a React frontend.',
-
-          'Implemented Redis caching to improve application performance, optimized response latency to below 2 seconds, and deployed the application using an automated CI/CD pipeline.',
+          'Developed a full-stack AI chatbot using Java, Spring Boot, React, and TypeScript, implementing HTTP session-based authentication, Redis-backed session management, email OTP verification, Google OAuth, and password recovery.',
+          'Built and integrated 25+ REST APIs for authentication, chat sessions, conversation history, AI model selection, chat search, file uploads, profile analytics, and real-time Live Talk functionality.',
         ],
       },
     ],
 
     education: {
       period: '2022 – 2025',
-      degree: 'B.Tech (ECE)',
-      institution: 'Vaagdegi Institute of Technology and Science',
+      degree: 'B.Tech – Electronics and Communication Engineering (ECE)',
+      institution: 'Vaagdevi Institute of Technology and Science',
       cgpa: '7.7/10',
     },
 
     certification: {
       name: 'Java Full Stack Development',
       organization: 'V Cube Software Solutions',
-      period: '2025 – 2026',
+      period: '',
     },
   };
 
