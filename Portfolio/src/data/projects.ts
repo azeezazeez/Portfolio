@@ -32,7 +32,7 @@ export const projectList: ProjectItem[] = [
     theme: 'rose',
 
     imageUrl:
-      'https://drive.google.com/file/d/1jfkDXIh-7LwFBTNeor8HRK2GNkcIRV17/view?usp=sharing',
+      'https://drive.google.com/file/d/1QaahXnUtL9Zg8BaMu1OTKQiEov_ZfKQg/view?usp=sharing',
 
     metrics:
       'JWT Authentication • Role-Based Authorization',
