@@ -4,7 +4,7 @@ export const personalData: PersonalInfo = {
   name: 'AZEEZ',
   role: 'Software Engineer/Fresher',
   badge: "HELLO, I'M ABDUL AZEEZ",
-  headlineMain: 'SOFTWARE ENGINEER',
+  headlineMain: 'SOFTWARE ENGINEER', 
   headlineSub: 'BUILDING USEFUL SOFTWARE.',
   bioIntro: "I build reliable backend systems, modern web applications, APIs, and AI-powered products.",
   bioDetailed: [
