@@ -18,7 +18,7 @@ export const personalData: PersonalInfo = {
   email: 'itsazeezwork@gmail.com',
   github: 'https://github.com/azeezazeez',
   linkedin: 'https://linkedin.com/in/azeezazeez',
-  twitter: 'https://x.com/itsazeez',
+  instagram: 'https://instagram.com/__azeez__azeez',
   resumeUrl: '#resume',
   availability: {
     status: true,
