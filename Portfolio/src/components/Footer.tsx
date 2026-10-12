@@ -222,6 +222,49 @@ export const Footer: React.FC = () => {
               />
             </div>
 
+              {/* =================================================
+                INSTAGRAM + DOT
+                ================================================= */}
+
+            <div className="group flex items-center gap-4">
+              <a
+                href={personalData.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  text-xs
+                  font-semibold
+                  text-[#667085]
+                  transition-colors
+                  duration-200
+                  hover:text-[#172033]
+                  focus:outline-none
+                  dark:text-[#94A3B8]
+                  dark:hover:text-[#F1F5F9]
+                "
+              >
+                Instagram
+              </a>
+
+              <span
+                aria-hidden="true"
+                className="
+                  block
+                  h-1.5
+                  w-1.5
+                  shrink-0
+                  rounded-full
+                  bg-[#CBD5E1]
+                  transition-all
+                  duration-200
+                  group-hover:bg-emerald-500
+                  group-hover:scale-125
+                  dark:bg-[#33435C]
+                  dark:group-hover:bg-emerald-500
+                "
+              />
+            </div>
+
             {/* =================================================
                 EMAIL + DOT
                 ================================================= */}
