@@ -42,7 +42,7 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Git', description: 'Branching strategies, history rebasing, atomic commits' },
       { name: 'GitHub', description: 'CI/CD actions, pull request workflows, package management' },
       { name: 'Postman', description: 'Automated test collections, mock servers, API verification' },
-      { name: 'IntelliJ IDEA', description: 'Deep JVM profiling, refactoring suites, server debugging' }
+      { name: 'IntelliJ IDEA', description: 'Deep JVM profiling, refactoring suites, server debugging' },
       { name: 'VS Code', description: 'Lightweight code editing, extensions, debugging, and Git integration' },
       { name: 'Eclipse', description: 'Java development, advanced debugging, refactoring, and project management' }
     ]
