@@ -15,7 +15,7 @@ export const personalData: PersonalInfo = {
   location: 'Cuddapah, Andhra Pradesh',
   interests: 'Distributed Systems, Clean Architecture, Developer Tooling, AI Agents',
   currentlyLearning: 'High-throughput event streaming & LLM orchestration patterns',
-  email: 'itsazeezazeez@gmail.com',
+  email: 'itsazeezwork@gmail.com',
   github: 'https://github.com/azeezazeez',
   linkedin: 'https://linkedin.com/in/azeezazeez',
   twitter: 'https://x.com/itsazeez',
