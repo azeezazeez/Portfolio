@@ -7,27 +7,28 @@ export const projectList: ProjectItem[] = [
 
     title: 'ZYPHORA E-COMMERCE',
 
-    tagline: 'Full-Stack E-Commerce Platform',
+    tagline: 'Full-Stack E-Commerce Web Application',
 
     description:
-      'A full-stack e-commerce platform built with Spring Boot and React, featuring secure authentication, role-based authorization, product management, cart and order workflows.',
+      'A full-stack e-commerce application with JWT authentication, role-based authorization, email OTP verification, and 30+ REST APIs built on Spring Boot, PostgreSQL, and React.',
 
     extendedDescription:
-      'Developed a complete e-commerce system using Java, Spring Boot, React, and PostgreSQL. Implemented JWT-based authentication and role-based authorization for customers and administrators. Designed RESTful APIs for products, carts, orders, users, and administrative operations, with a modular backend architecture and optimized database queries for reliable application performance.',
+      'Developed a full-stack e-commerce application with JWT authentication, role-based authorization, email OTP verification, and secure password management. Built 30+ REST APIs for authentication, products, cart, wishlist, orders, customer management, and admin operations, with validation, exception handling, and PostgreSQL persistence.',
 
     technologies: [
       'Java',
       'Spring Boot',
-      'React',
-      'PostgreSQL',
+      'Spring Security',
       'JWT',
+      'PostgreSQL',
+      'React',
+      'TypeScript',
+      'Docker',
     ],
 
-    githubUrl:
-      'https://github.com/azeezazeez/Zyphora-Ecommerce.git',
+    githubUrl: 'https://github.com/azeezazeez/Zyphora-Ecommerce',
 
-    liveUrl:
-      'https://zyphora-cart.vercel.app',
+    liveUrl: 'https://zyphora-cart.vercel.app',
 
     theme: 'rose',
 
@@ -35,8 +36,7 @@ export const projectList: ProjectItem[] = [
     imageUrl:
       'https://drive.google.com/file/d/1jfkDXIh-7LwFBTNeor8HRK2GNkcIRV17/view?usp=sharing',
 
-    metrics:
-      'JWT Authentication • Role-Based Authorization',
+    metrics: '30+ REST APIs • JWT Authentication • Role-Based Authorization',
 
     preview: {
       type: 'dashboard',
@@ -48,28 +48,32 @@ export const projectList: ProjectItem[] = [
     id: 'project-2',
     number: 'PROJECT 02',
 
-    title: 'TWINKLE AI',
+    title: 'TWINKLE',
 
-    tagline: 'AI-Powered Conversational Assistant',
+    tagline: 'Multi-Model AI Platform',
 
     description:
-      'An AI-powered chatbot application built with Java and Spring Boot, integrating Groq AI for intelligent natural-language conversations and Redis for efficient data handling.',
+      'A full-stack AI chatbot with session-based authentication, Redis-backed sessions, email OTP, Google OAuth, and 25+ REST APIs, integrating Groq and Google Gemini with RAG.',
 
     extendedDescription:
-      'Developed an AI chatbot application using Java and Spring Boot with Groq AI integration for natural-language processing and intelligent responses. Designed RESTful APIs to provide seamless communication between the frontend, backend, and AI services. Integrated Redis to improve request handling and application efficiency while maintaining a scalable backend architecture.',
+      'Designed and deployed a full-stack AI chatbot with HTTP session-based authentication, Redis-backed session management, email OTP verification, Google OAuth, and password recovery. Built 25+ REST APIs for authentication, chat sessions, conversation history, AI model selection, chat search, file uploads, profile analytics, and real-time Live Talk. Integrated Groq and Google Gemini APIs to support multi-model chat, using Retrieval-Augmented Generation (RAG).',
 
     technologies: [
       'Java',
       'Spring Boot',
-      'Groq AI',
+      'Spring Session',
       'Redis',
+      'PostgreSQL',
+      'React',
+      'TypeScript',
+      'Groq API',
+      'Google Gemini API',
+      'RAG',
     ],
 
-    githubUrl:
-      'https://github.com/azeezazeez/Twinkle-AI',
+    githubUrl: 'https://github.com/azeezazeez/Twinkle-AI',
 
-    liveUrl:
-      'https://twinkleai.vercel.app',
+    liveUrl: 'https://twinkleai.vercel.app',
 
     theme: 'blue',
 
@@ -77,8 +81,7 @@ export const projectList: ProjectItem[] = [
     imageUrl:
       'https://drive.google.com/file/d/1bi6tnT-9wEYB09rf1rvwzzqSl5QoQXIz/view?usp=sharing',
 
-    metrics:
-      'AI Integration • Redis Caching',
+    metrics: '25+ REST APIs • Multi-Model AI • Redis Sessions',
 
     preview: {
       type: 'ai-chat',
