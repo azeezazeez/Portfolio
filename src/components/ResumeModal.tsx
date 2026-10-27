@@ -11,6 +11,11 @@ import {
 } from 'lucide-react';
 import * as pdfjsLib from 'pdfjs-dist';
 import type { PDFDocumentProxy, RenderTask } from 'pdfjs-dist';
+import {
+  RESUME_URL,
+  prefetchResume,
+  downloadResume,
+} from '../utils/resumeDownload';
 import pdfWorkerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
@@ -22,8 +27,6 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
  * The PDF lives in the /public folder, so it is served from the
  * site root: public/AZEEZ_RESUME.pdf  ->  /AZEEZ_RESUME.pdf
  */
-const RESUME_FILE = 'AZEEZ_RESUME.pdf';
-const RESUME_URL = `${import.meta.env.BASE_URL}${RESUME_FILE}`;
 
 const MIN_ZOOM = 0.5;
 const MAX_ZOOM = 3;
@@ -189,6 +192,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
     setPdf(null);
     setLoadError(false);
     setZoom(1);
+    prefetchResume();
 
     const loadingTask = pdfjsLib.getDocument(RESUME_URL);
 
@@ -309,14 +313,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({
    */
   const handleDownloadFile = () => {
     try {
-      const link = document.createElement('a');
-
-      link.href = RESUME_URL;
-      link.download = RESUME_FILE;
-
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+      downloadResume();
 
       showFeedback('Resume downloaded successfully!', 'success');
     } catch (err) {
