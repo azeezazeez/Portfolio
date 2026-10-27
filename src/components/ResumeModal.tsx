@@ -20,13 +20,9 @@ import pdfWorkerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url';
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl;
 
-/*
- * ============================================================
- * CONFIG
- * ============================================================
- * The PDF lives in the /public folder, so it is served from the
- * site root: public/AZEEZ_RESUME.pdf  ->  /AZEEZ_RESUME.pdf
- */
+
+const MIN_RENDER_SCALE = 2;
+const MAX_CANVAS_PIXELS = 16_000_000;
 
 const MIN_ZOOM = 0.5;
 const MAX_ZOOM = 3;
@@ -80,17 +76,32 @@ const PdfPage: React.FC<PdfPageProps> = ({
         const cssScale = (baseWidth / unscaled.width) * zoom;
         const cssViewport = page.getViewport({ scale: cssScale });
 
-        // Render at device pixel ratio for sharp text (capped for memory).
-        const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        const viewport = page.getViewport({ scale: cssScale * dpr });
+        /*
+         * Sharpness: always render at least 2x the on-screen size
+         * (supersampling) and let the browser scale it down. This keeps
+         * text crisp on normal screens and with browser zoom (e.g. 125%).
+         * Capped so the canvas never exceeds safe memory limits.
+         */
+        const cssWidth = cssViewport.width;
+        const cssHeight = cssViewport.height;
+        const dpr = window.devicePixelRatio || 1;
+        const wanted = Math.max(dpr, MIN_RENDER_SCALE);
+        const maxByArea = Math.sqrt(MAX_CANVAS_PIXELS / (cssWidth * cssHeight));
+        const outputScale = Math.max(1, Math.min(wanted, maxByArea));
 
-        canvas.width = Math.floor(viewport.width);
-        canvas.height = Math.floor(viewport.height);
-        canvas.style.width = `${Math.floor(cssViewport.width)}px`;
-        canvas.style.height = `${Math.floor(cssViewport.height)}px`;
+        const viewport = page.getViewport({ scale: cssScale * outputScale });
 
-        const context = canvas.getContext('2d');
+        canvas.width = Math.ceil(viewport.width);
+        canvas.height = Math.ceil(viewport.height);
+        // CSS size derived from the canvas size so there is no
+        // fractional resampling blur.
+        canvas.style.width = `${canvas.width / outputScale}px`;
+        canvas.style.height = `${canvas.height / outputScale}px`;
+
+        const context = canvas.getContext('2d', { alpha: false });
         if (!context) return;
+        context.imageSmoothingEnabled = true;
+        context.imageSmoothingQuality = 'high';
 
         renderTask = page.render({
           canvasContext: context,
