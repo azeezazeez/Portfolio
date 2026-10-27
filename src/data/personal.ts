@@ -2,19 +2,21 @@ import { PersonalInfo } from '../types';
 
 export const personalData: PersonalInfo = {
   name: 'AZEEZ',
-  role: 'Software Engineer/Fresher',
+  role: 'Software Developer | Java Backend | Spring Boot',
   badge: "HELLO, I'M ABDUL AZEEZ",
-  headlineMain: 'SOFTWARE ENGINEER',
+  headlineMain: 'SOFTWARE DEVELOPER',
   headlineSub: 'BUILDING USEFUL SOFTWARE.',
-  bioIntro: "I build reliable backend systems, modern web applications, APIs, and AI-powered products.",
+  bioIntro:
+    'Backend-focused Java developer building secure REST APIs, full-stack web applications, and AI-powered products with Spring Boot, PostgreSQL, Redis, and React.',
   bioDetailed: [
-    "I'm a Software Engineer/Fresher passionate about building reliable software, scalable backend systems, modern web applications, APIs, and AI-powered experiences.",
-    "My focus centers on combining robust server architectures with intuitive, understated user interfaces. I believe software should be fast, resilient, and remarkably straightforward to use.",
-    "Whether designing data ingestion pipelines with Spring Boot, authoring type-safe REST APIs, or crafting fluid web applications with React and TypeScript, I prioritize clarity and system health above all else."
+    "I'm a backend-focused Java developer who designed and deployed two full-stack applications, an AI chat platform and an e-commerce app, with 55+ REST APIs built on Spring Boot, PostgreSQL, and React.",
+    'During a six-month internship at V Cube Software Solutions, I developed 50+ REST APIs and reduced API response time by 30% with Redis caching, while debugging services with Postman and documenting them with Swagger/OpenAPI.',
+    'I focus on secure authentication and authorization (session-based, JWT, OAuth 2.0, RBAC, email OTP), ORM-based data access, caching, Docker, CI/CD, and LLM API integration with Groq and Google Gemini.',
   ],
-  location: 'Cuddapah, Andhra Pradesh',
-  interests: 'Distributed Systems, Clean Architecture, Developer Tooling, AI Agents',
-  currentlyLearning: 'High-throughput event streaming & LLM orchestration patterns',
+  location: 'Hyderabad, Telangana',
+  interests:
+    'Backend Development, REST API Design, Secure Authentication, AI Integration',
+  currentlyLearning: 'LLM API integration & Retrieval-Augmented Generation (RAG)',
   email: 'itsazeezwork@gmail.com',
   github: 'https://github.com/azeezazeez',
   linkedin: 'https://linkedin.com/in/azeezazeez',
@@ -22,6 +24,6 @@ export const personalData: PersonalInfo = {
   resumeUrl: '#resume',
   availability: {
     status: true,
-    text: 'OPEN TO OPPORTUNITIES'
-  }
+    text: 'OPEN TO OPPORTUNITIES',
+  },
 };
