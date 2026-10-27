@@ -34,7 +34,7 @@ export const projectList: ProjectItem[] = [
 
     // Your original Google Drive sharing URL
     imageUrl:
-      'https://drive.google.com/file/d/1jfkDXIh-7LwFBTNeor8HRK2GNkcIRV17/view?usp=sharing',
+      'https://drive.google.com/file/d/1QaahXnUtL9Zg8BaMu1OTKQiEov_ZfKQg/view?usp=sharing',
 
     metrics: '30+ REST APIs • JWT Authentication • Role-Based Authorization',
 
@@ -79,7 +79,7 @@ export const projectList: ProjectItem[] = [
 
     // Your original Google Drive sharing URL
     imageUrl:
-      'https://drive.google.com/file/d/1bi6tnT-9wEYB09rf1rvwzzqSl5QoQXIz/view?usp=sharing',
+      'https://drive.google.com/file/d/1BfZE71L9qDvT36OtwhHZpxsYt_NeFsPu/view?usp=sharing',
 
     metrics: '25+ REST APIs • Multi-Model AI • Redis Sessions',
 
