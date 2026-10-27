@@ -3,17 +3,30 @@ import { ExperienceItem } from '../types';
 export const experienceList: ExperienceItem[] = [
   {
     id: 'exp-1',
-    role: 'JAVA BACKEND DEVELOPER',
+    role: 'JAVA DEVELOPER INTERN',
     company: 'V Cube Software Solutions',
-    period: '2025 — 2026',
+    period: 'Aug 2025 — Feb 2026',
     location: 'Hyderabad, Telangana',
     isCurrent: false,
-    description: 'Leading the development of core backend services, robust REST APIs, AI integrations, and modern web applications with strict availability targets.',
+    description:
+      'Built and documented secure Spring Boot REST APIs, backed by PostgreSQL and Redis caching, and supported Docker-based deployments through CI/CD pipelines.',
     responsibilities: [
-      'Designed and deployed high-throughput REST APIs using Spring Boot and Java, achieving sub-40ms P95 latency.',
-      'Integrated Gemini and Groq model inference into customer-facing document analysis workflows with streaming responses.',
-      'Collaborated closely with product designers to implement clean, accessible React interfaces with subtle micro-interactions.'
+      'Developed 50+ REST APIs using Java, Spring Boot, and Spring Security, with authentication, role-based authorization, and request validation.',
+      'Built the data layer with JPA, Hibernate, and PostgreSQL, and optimized queries to improve performance.',
+      'Implemented Redis caching, reducing API response time by 30%.',
+      'Debugged and resolved backend and API defects using Postman, improving service reliability.',
+      'Documented APIs with Swagger/OpenAPI and supported Docker-based deployments through GitHub Actions CI/CD pipelines.',
     ],
-    techStack: ['Java', 'Spring Boot', 'REST APIs', 'Gemini', 'React', 'TypeScript']
+    techStack: [
+      'Java',
+      'Spring Boot',
+      'Spring Security',
+      'JPA / Hibernate',
+      'PostgreSQL',
+      'Redis',
+      'Docker',
+      'GitHub Actions',
+      'Swagger',
+    ],
   },
 ];
