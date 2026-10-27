@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, FileText, Eye, Download, ChevronDown } from 'lucide-react';
 import { personalData } from '../data/personal';
 import { ThemeToggle } from './ThemeToggle';
+import { prefetchResume, downloadResume } from '../utils/resumeDownload';
 
 interface NavbarProps {
   onOpenResume: () => void;
@@ -15,9 +16,6 @@ const NAV_LINKS = [
   { name: 'Projects', href: '#projects' },
   { name: 'Contact', href: '#contact' },
 ];
-
-const RESUME_FILE = 'AZEEZ_RESUME.pdf';
-const RESUME_URL = `${import.meta.env.BASE_URL}${RESUME_FILE}`;
 
 /*
  * Resume dropdown: "View" opens the preview modal (with + / - zoom),
@@ -62,13 +60,13 @@ const ResumeMenu: React.FC<ResumeMenuProps> = ({ onView, compact = false, idSuff
 
   const handleDownload = () => {
     setOpen(false);
-    const link = document.createElement('a');
-    link.href = RESUME_URL;
-    link.download = RESUME_FILE;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    downloadResume();
   };
+
+  // Load the PDF into memory in the background so Download is instant.
+  useEffect(() => {
+    prefetchResume();
+  }, []);
 
   const itemClass =
     'w-full flex items-center gap-2 px-3 py-2 text-xs font-medium text-left rounded-lg text-[#667085] dark:text-[#94A3B8] hover:text-[#172033] dark:hover:text-[#F1F5F9] hover:bg-[#F8FAFC] dark:hover:bg-[#161F2E] transition-colors cursor-pointer';
