@@ -33,7 +33,7 @@ const MAX_ZOOM = 3;
 const ZOOM_STEP = 0.25;
 
 const NAME = 'ACHUKATLA ABDUL AZEEZ';
-const ROLE = 'Java Developer — Java Backend Developer';
+const ROLE = 'Software Developer | Java Backend | Spring Boot';
 const EMAIL = 'itsazeezwork@gmail.com';
 
 interface ResumeModalProps {
