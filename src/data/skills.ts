@@ -4,56 +4,76 @@ export const skillCategories: SkillCategory[] = [
   {
     id: 'languages',
     title: 'LANGUAGES',
-    description: 'Foundational syntax and strongly-typed languages for robust engineering.',
+    description: 'Languages used across backend services and web applications.',
     skills: [
-      { name: 'Java', description: 'Enterprise backend development, JVM performance, concurrency' },
-      { name: 'TypeScript', description: 'Static type systems, full-stack contracts, scalable apps' },
-      { name: 'JavaScript', description: 'Modern ES6+ syntax, asynchronous programming, DOM runtime' },
-      { name: 'SQL', description: 'Relational queries, index optimization, schema migrations' },
-      { name: 'HTML', description: 'Semantic structure, accessibility standards, web standards' },
-      { name: 'CSS', description: 'Responsive layouts, modern CSS variables, CSS architecture' }
-    ]
+      { name: 'Java', description: 'Backend development, OOP, collections, streams' },
+      { name: 'SQL', description: 'Relational queries and query optimization' },
+      { name: 'JavaScript', description: 'Frontend logic for React applications' },
+      { name: 'TypeScript', description: 'Typed frontends for full-stack projects' },
+      { name: 'HTML', description: 'Semantic page structure' },
+      { name: 'CSS', description: 'Responsive layouts and styling' },
+    ],
   },
   {
     id: 'backend',
     title: 'BACKEND',
-    description: 'Server frameworks, distributed services, and resilient API contracts.',
+    description: 'Spring-based services, secure authentication, and REST API design.',
     skills: [
-      { name: 'Spring Boot', description: 'Microservices, dependency injection, production services' },
-      { name: 'Spring MVC', description: 'Controller orchestration, request filters, validation' },
-      { name: 'REST APIs', description: 'Idempotent endpoint design, status mapping, OpenAPI documentation' }
-    ]
+      { name: 'Spring Boot', description: 'REST services, layered architecture, validation' },
+      { name: 'Spring MVC', description: 'Controllers, request handling, exception handling' },
+      { name: 'Spring Security', description: 'Authentication, authorization, RBAC' },
+      { name: 'Spring Data JPA', description: 'Repositories and ORM-based data access' },
+      { name: 'Hibernate', description: 'ORM mapping and persistence' },
+      { name: 'Spring Session', description: 'Redis-backed session management' },
+      { name: 'REST APIs', description: 'API design, JSON, request validation' },
+      { name: 'JWT', description: 'Token-based authentication' },
+      { name: 'OAuth 2.0', description: 'Google OAuth sign-in' },
+      { name: 'RBAC', description: 'Role-based authorization' },
+    ],
+  },
+  {
+    id: 'databases',
+    title: 'DATABASES & CACHING',
+    description: 'Relational persistence and caching for faster API responses.',
+    skills: [
+      { name: 'PostgreSQL', description: 'Schema design and query optimization' },
+      { name: 'MySQL', description: 'Relational database' },
+      { name: 'Redis', description: 'Caching and session storage' },
+    ],
   },
   {
     id: 'frontend',
     title: 'FRONTEND',
-    description: 'Declarative component libraries, state management, and modern styling.',
+    description: 'React interfaces that connect to the Java backends.',
     skills: [
-      { name: 'React', description: 'Component lifecycles, hooks, virtual DOM optimization' },
-      { name: 'Next.js', description: 'SSR/SSG hybrid rendering, API routes, routing architecture' },
-      { name: 'Tailwind CSS', description: 'Utility-first styling, design system tokens, responsive layouts' }
-    ]
-  },
-  {
-    id: 'tools',
-    title: 'TOOLS',
-    description: 'Developer environments, version control, and debugging toolchains.',
-    skills: [
-      { name: 'Git', description: 'Branching strategies, history rebasing, atomic commits' },
-      { name: 'GitHub', description: 'CI/CD actions, pull request workflows, package management' },
-      { name: 'Postman', description: 'Automated test collections, mock servers, API verification' },
-      { name: 'IntelliJ IDEA', description: 'Deep JVM profiling, refactoring suites, server debugging' }
-    ]
+      { name: 'React', description: 'Component-based UIs and hooks' },
+      { name: 'TypeScript', description: 'Typed components and API contracts' },
+      { name: 'JavaScript', description: 'Browser-side application logic' },
+    ],
   },
   {
     id: 'ai',
-    title: 'AI',
-    description: 'Next-generation foundation models, ultra-low latency inference, and reasoning pipelines.',
+    title: 'AI & INTEGRATION',
+    description: 'LLM API integration and API documentation.',
     skills: [
-      { name: 'Gemini', description: 'Multimodal processing, function calling, long-context reasoning' },
-      { name: 'Groq', description: 'Ultra-fast LPU inference, streaming LLM outputs' },
-      { name: 'AI APIs', description: 'Embeddings generation, semantic search, vector databases' },
-      { name: 'LLM Integrations', description: 'Prompt engineering, structured outputs, agent loops' }
-    ]
-  }
+      { name: 'Groq API', description: 'LLM chat integration' },
+      { name: 'Google Gemini API', description: 'Multi-model chat integration' },
+      { name: 'RAG', description: 'Retrieval-Augmented Generation' },
+      { name: 'OpenAPI', description: 'API specifications' },
+      { name: 'Swagger', description: 'Interactive API documentation' },
+    ],
+  },
+  {
+    id: 'tools',
+    title: 'DEVOPS & TOOLS',
+    description: 'Containerization, CI/CD, and everyday developer tooling.',
+    skills: [
+      { name: 'Docker', description: 'Containerized deployments' },
+      { name: 'GitHub Actions', description: 'CI/CD pipelines' },
+      { name: 'CI/CD', description: 'Automated build and deploy workflows' },
+      { name: 'Git', description: 'Version control' },
+      { name: 'GitHub', description: 'Collaboration and code hosting' },
+      { name: 'Postman', description: 'API testing and debugging' },
+    ],
+  },
 ];
