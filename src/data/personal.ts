@@ -20,6 +20,7 @@ export const personalData: PersonalInfo = {
   email: 'itsazeezwork@gmail.com',
   github: 'https://github.com/azeezazeez',
   linkedin: 'https://linkedin.com/in/azeezazeez',
+  Instagram: 'https://instagram.com/__azeez__azeez',
   resumeUrl: '#resume',
   availability: {
     status: true,
