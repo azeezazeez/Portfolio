@@ -2,7 +2,7 @@ import { PersonalInfo } from '../types';
 
 export const personalData: PersonalInfo = {
   name: 'AZEEZ',
-  role: 'Software Developer | Java Backend | Spring Boot',
+  role: 'Software Developer',
   badge: "HELLO, I'M ABDUL AZEEZ",
   headlineMain: 'SOFTWARE DEVELOPER',
   headlineSub: 'BUILDING USEFUL SOFTWARE.',
@@ -20,7 +20,6 @@ export const personalData: PersonalInfo = {
   email: 'itsazeezwork@gmail.com',
   github: 'https://github.com/azeezazeez',
   linkedin: 'https://linkedin.com/in/azeezazeez',
-  twitter: 'https://x.com/itsazeez',
   resumeUrl: '#resume',
   availability: {
     status: true,
